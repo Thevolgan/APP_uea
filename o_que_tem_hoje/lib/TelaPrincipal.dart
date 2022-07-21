@@ -1,6 +1,8 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'Pagamento.dart';
+import 'Calendario.dart';
+import 'Aluno_online.dart';
 
 class TelaPrincipal extends StatefulWidget {
   const TelaPrincipal({Key? key}) : super(key: key);
@@ -10,16 +12,21 @@ class TelaPrincipal extends StatefulWidget {
 }
 
 class _TelaPrincipalState extends State<TelaPrincipal> {
+
+
   @override
   Widget build(BuildContext context) {
+  
 
-    
-    final items = <Widget>[
+  // ------------------  Parte do bottom navigation bar   --------------------
+    /*final items = <Widget>[
       Icon(Icons.home, size: 30),
       Icon(Icons.calendar_month, size: 30),
       Icon(Icons.qr_code_outlined, size: 30),
       Icon(Icons.person, size: 30),
-    ];
+    ];*/
+  // ------------------  Parte do bottom navigation bar   --------------------
+
 
     return Scaffold(
       appBar: AppBar(
@@ -41,7 +48,7 @@ class _TelaPrincipalState extends State<TelaPrincipal> {
       ),
       //backgroundColor: Color.fromARGB(255, 214, 214, 214),
       body: Padding(
-          padding: EdgeInsets.all(15),
+          padding: EdgeInsets.only(left:15, right: 15, top: 30),
           //bloco cinza por debaixo dos cards:
           child: Container(
             height: 510,
@@ -70,12 +77,15 @@ class _TelaPrincipalState extends State<TelaPrincipal> {
                   child: Container(
                       height: 100,
                       decoration: BoxDecoration(
-                        boxShadow: [BoxShadow(
-                          color: Colors.grey,
-                          spreadRadius: 3, //quantidade de pixels ao redor do container
-                          blurRadius: 12, //o nível de espalhamento da shadow
-                          offset: Offset(10, 10) 
-                        )],
+                        boxShadow: [
+                          BoxShadow(
+                              color: Colors.grey,
+                              spreadRadius:
+                                  3, //quantidade de pixels ao redor do container
+                              blurRadius:
+                                  12, //o nível de espalhamento da shadow
+                              offset: Offset(10, 10))
+                        ],
                         color: Color.fromARGB(255, 9, 186, 100),
                         borderRadius: BorderRadius.only(
                             bottomLeft: Radius.circular(15),
@@ -112,12 +122,15 @@ class _TelaPrincipalState extends State<TelaPrincipal> {
                   child: Container(
                       height: 100,
                       decoration: BoxDecoration(
-                        boxShadow: [BoxShadow(
-                          color: Colors.grey,
-                          spreadRadius: 3, //quantidade de pixels ao redor do container
-                          blurRadius: 12, //o nível de espalhamento da shadow
-                          offset: Offset(10, 10) 
-                        )],
+                        boxShadow: [
+                          BoxShadow(
+                              color: Colors.grey,
+                              spreadRadius:
+                                  3, //quantidade de pixels ao redor do container
+                              blurRadius:
+                                  12, //o nível de espalhamento da shadow
+                              offset: Offset(10, 10))
+                        ],
                         color: Color.fromARGB(255, 9, 186, 100),
                         borderRadius: BorderRadius.only(
                             bottomLeft: Radius.circular(15),
@@ -154,12 +167,15 @@ class _TelaPrincipalState extends State<TelaPrincipal> {
                   child: Container(
                       height: 100,
                       decoration: BoxDecoration(
-                        boxShadow: [BoxShadow(
-                          color: Colors.grey,
-                          spreadRadius: 3, //quantidade de pixels ao redor do container
-                          blurRadius: 12, //o nível de espalhamento da shadow
-                          offset: Offset(10, 10) 
-                        )],
+                        boxShadow: [
+                          BoxShadow(
+                              color: Colors.grey,
+                              spreadRadius:
+                                  3, //quantidade de pixels ao redor do container
+                              blurRadius:
+                                  12, //o nível de espalhamento da shadow
+                              offset: Offset(10, 10))
+                        ],
                         color: Color.fromARGB(255, 9, 186, 100),
                         borderRadius: BorderRadius.only(
                             bottomLeft: Radius.circular(15),
@@ -202,7 +218,6 @@ class _TelaPrincipalState extends State<TelaPrincipal> {
                       elevation: 15,
                       shadowColor: Colors.purple,
                     ),
-                    
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
@@ -226,14 +241,17 @@ class _TelaPrincipalState extends State<TelaPrincipal> {
           )),
 
 
-      bottomNavigationBar: CurvedNavigationBar(
+
+
+// -------------   O bottom navigation bar foi transferido para home_page.dart  -------------------
+      /*bottomNavigationBar: CurvedNavigationBar(
         buttonBackgroundColor: Color.fromARGB(255, 9, 186, 100),
         backgroundColor: Colors.transparent,
         height: 60,
         animationCurve: Curves.easeInOut,
         animationDuration: Duration(milliseconds: 200),
         items: items,
-      ),
+      ),*/
     );
   }
 }
